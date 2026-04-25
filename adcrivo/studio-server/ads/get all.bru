@@ -1,0 +1,16 @@
+meta {
+  name: get all
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{studio-backend-uri}}api/ads
+  body: none
+  auth: none
+}
+
+query {
+  ~creativeId: 
+  ~campaignId: 
+}
