@@ -1,0 +1,21 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{studio-backend-uri}}api/ads
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "creativeId": "",
+    "name": "Sample Ad",
+    "description": "A sample ad description",
+    "height": 250,
+    "width": 300
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: ads
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{studio-backend-uri}}api/campaigns/:id/ads
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 
+}

@@ -1,0 +1,22 @@
+meta {
+  name: update
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{studio-backend-uri}}api/campaigns/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: 
+}
+
+body:json {
+  {
+    "name": "Updated Campaign Name",
+    "description": "Updated campaign description"
+  }
+}

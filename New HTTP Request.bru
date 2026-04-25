@@ -1,0 +1,17 @@
+meta {
+  name: New HTTP Request
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3001/api/templates/upload/
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  name: First Template
+  description: Testing Template Upload Functionality
+  file: @file(/Users/dhirajbhor11/Workspace/Adcrivo/backend/src/mock/testAds/ad1.zip) @contentType(application/zip)
+}

@@ -1,0 +1,15 @@
+meta {
+  name: publish
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{studio-backend-uri}}api/ads/publish/:adId
+  body: none
+  auth: none
+}
+
+params:path {
+  adId: 
+}

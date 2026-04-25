@@ -1,0 +1,21 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{studio-backend-uri}}api/creatives/
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  name: first creative
+  description: testing first creative
+  templateId: 47968aae-4258-4f78-89dc-60e6024c46c2
+  campaignId: f4550393-5aa1-4b3b-a995-9dc542591341
+  width: 100
+  height: 100
+  ~file: @file()
+}

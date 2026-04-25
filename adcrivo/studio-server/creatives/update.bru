@@ -1,0 +1,24 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{studio-backend-uri}}api/creatives/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: 
+}
+
+body:json {
+  {
+    "campaignId": "",
+    "templateId": "",
+    "name": "Updated Creative Name",
+    "description": "Updated description"
+  }
+}

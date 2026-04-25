@@ -1,0 +1,20 @@
+meta {
+  name: upload
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{studio-backend-uri}}api/ads/upload
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  files: @file()
+  name: Uploaded Ad
+  description: Description for uploaded ad
+  creativeId: 
+  height: 250
+  width: 300
+}

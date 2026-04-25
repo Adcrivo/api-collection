@@ -1,0 +1,638 @@
+{
+  "v": 10,
+  "name": "adcrivo",
+  "folders": [
+    {
+      "v": 10,
+      "name": "live",
+      "folders": [],
+      "requests": [
+        {
+          "v": "16",
+          "name": "ad",
+          "method": "GET",
+          "endpoint": "https://echo.hoppscotch.io",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "_ref_id": "req_mgdl8wsa_b0bbc926-21a0-4df1-8873-a486dd6b11da"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "_ref_id": "coll_mb9g7a7h_6c77aaa2-5d26-4e6d-af4f-77f036e7952c"
+    },
+    {
+      "v": 10,
+      "name": "studio",
+      "folders": [
+        {
+          "v": 10,
+          "name": "campaigns",
+          "folders": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "create",
+              "method": "POST",
+              "endpoint": "{studio-backend-uri}api/campaigns/",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"name\":\"campaign1\",\n  \"description\": \"campaign1 desc\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_5f8f51ab-d2ee-471c-a95d-209ac139c560"
+            },
+            {
+              "v": "16",
+              "name": "get all",
+              "method": "GET",
+              "endpoint": "http://localhost:3001/api/campaigns/",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_2a21973c-e8f1-4d7b-87b1-3c4045bbfec9"
+            },
+            {
+              "v": "16",
+              "name": "get ",
+              "method": "GET",
+              "endpoint": "http://localhost:3001/api/campaigns/59ec7161-3df7-4f13-a29d-e75c040d0759",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_c2b373dd-d5e9-498e-a26a-9dff56bd80c3"
+            },
+            {
+              "v": "16",
+              "name": "creatives",
+              "method": "GET",
+              "endpoint": "http://localhost:3001/api/campaigns/59ec7161-3df7-4f13-a29d-e75c040d0759/creatives",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_8139bd55-4db2-4240-a867-8b671afe5a52"
+            }
+          ],
+          "auth": {
+            "authActive": true,
+            "authType": "inherit"
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mb9g7a7h_66e8500d-e65c-4868-a118-28dec0d51427"
+        },
+        {
+          "v": 10,
+          "name": "templates",
+          "folders": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "upload",
+              "method": "POST",
+              "endpoint": "http://localhost:3001/api/templates/upload/",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "multipart/form-data",
+                "body": [
+                  {
+                    "key": "name",
+                    "active": true,
+                    "isFile": false,
+                    "value": "test_template"
+                  },
+                  {
+                    "key": "description",
+                    "active": true,
+                    "isFile": false,
+                    "value": "first_template_for testing"
+                  },
+                  {
+                    "key": "file",
+                    "active": true,
+                    "contentType": "application/zip",
+                    "isFile": false,
+                    "value": ""
+                  }
+                ],
+                "showIndividualContentType": true
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_338fbada-a522-48fe-8532-9689a78998bd"
+            },
+            {
+              "v": "16",
+              "name": "download",
+              "method": "GET",
+              "endpoint": "http://localhost:3000/api/templates/cf0f9123-f95f-41cd-b708-f9db9802a695",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_e52a84db-1e62-4862-8c2f-cfdf4f091864"
+            },
+            {
+              "v": "16",
+              "name": "delete",
+              "method": "DELETE",
+              "endpoint": "http://localhost:3000/api/templates/cf0f9123-f95f-41cd-b708-f9db9802a695",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_cf616407-4040-49f7-b06f-3a4849ccb894"
+            },
+            {
+              "v": "16",
+              "name": "get all",
+              "method": "GET",
+              "endpoint": "http://localhost:3001/api/templates/",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_27220bbb-2dc9-4b06-82f3-0407f8a8d7a0"
+            },
+            {
+              "v": "16",
+              "name": "upload - Duplicate",
+              "method": "POST",
+              "endpoint": "http://localhost:3001/api/templates/upload/",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "multipart/form-data",
+                "body": [
+                  {
+                    "key": "name",
+                    "active": true,
+                    "isFile": false,
+                    "value": "test_template"
+                  },
+                  {
+                    "key": "description",
+                    "active": true,
+                    "isFile": false,
+                    "value": "first_template_for testing"
+                  },
+                  {
+                    "key": "file",
+                    "active": true,
+                    "contentType": "application/zip",
+                    "isFile": false,
+                    "value": ""
+                  }
+                ],
+                "showIndividualContentType": true
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_338fbada-a522-48fe-8532-9689a78998bd"
+            }
+          ],
+          "auth": {
+            "authActive": true,
+            "authType": "inherit"
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mb9g7a7h_6326a438-7587-48f7-aede-754e24970138"
+        },
+        {
+          "v": 10,
+          "name": "ads",
+          "folders": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "upload",
+              "method": "POST",
+              "endpoint": "http://localhost:3001/api/ads/upload",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "multipart/form-data",
+                "body": [
+                  {
+                    "key": "name",
+                    "active": true,
+                    "isFile": false,
+                    "value": "test Ad"
+                  },
+                  {
+                    "key": "description",
+                    "active": true,
+                    "isFile": false,
+                    "value": "testing ad"
+                  },
+                  {
+                    "key": "creativeId",
+                    "active": true,
+                    "isFile": false,
+                    "value": "4f21dfd0-d834-4ff4-9381-e31c56f91d65"
+                  },
+                  {
+                    "key": "files",
+                    "active": true,
+                    "isFile": false,
+                    "value": ""
+                  }
+                ],
+                "showIndividualContentType": true
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_385d04e5-91af-4447-b90d-c188eb02cf27"
+            },
+            {
+              "v": "16",
+              "name": "create",
+              "method": "POST",
+              "endpoint": "http://localhost:3001/api/ads/",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n  \"name\":\"ad2\",\n  \"description\": \"creating a new ad test\",\n  \"creativeId\" : \"9b695b02-eb98-4847-aa7c-52c48576af55\"\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_06504f67-67e3-4202-b9e9-d326aeec6030"
+            }
+          ],
+          "auth": {
+            "authActive": true,
+            "authType": "inherit"
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mb9g7a7h_7d2fa310-0540-4cd6-a69a-c8ed25cb7ef9"
+        },
+        {
+          "v": 10,
+          "name": "creative",
+          "folders": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "create",
+              "method": "POST",
+              "endpoint": "http://localhost:3001/api/creatives/",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "multipart/form-data",
+                "body": [
+                  {
+                    "key": "name",
+                    "active": true,
+                    "isFile": false,
+                    "value": "creative 2"
+                  },
+                  {
+                    "key": "description",
+                    "active": true,
+                    "isFile": false,
+                    "value": "test creative"
+                  },
+                  {
+                    "key": "campaignId",
+                    "active": true,
+                    "isFile": false,
+                    "value": "a5595616-983f-4e1f-b55b-036f8ee87f46"
+                  },
+                  {
+                    "key": "templateId",
+                    "active": true,
+                    "isFile": false,
+                    "value": "49914b5c-3369-4cc2-af4b-c28504e41400"
+                  },
+                  {
+                    "key": "file",
+                    "active": false,
+                    "isFile": false,
+                    "value": ""
+                  },
+                  {
+                    "key": "height",
+                    "active": true,
+                    "isFile": false,
+                    "value": "123"
+                  },
+                  {
+                    "key": "width",
+                    "active": true,
+                    "isFile": false,
+                    "value": "234"
+                  }
+                ],
+                "showIndividualContentType": true
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_34596100-cb0b-45dd-a6a6-d2d31c59e431"
+            },
+            {
+              "v": "16",
+              "name": "ads",
+              "method": "GET",
+              "endpoint": "http://localhost:3001/api/creatives/7a5a73a7-44ca-45b9-9534-cfab89f0c3fb/ads",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_25aa32f4-460d-458b-b581-5de38c4e8951"
+            },
+            {
+              "v": "16",
+              "name": "get ",
+              "method": "GET",
+              "endpoint": "http://localhost:3001/api/creatives/ada0c40c-1581-4d2b-b8b5-fb0c6198d63c",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_c4a9fd97-8969-45bc-ac99-17f4c7e130b3"
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mb9g7a7h_4f424ebe-3055-4f60-b8dd-d4d58770afc1"
+        }
+      ],
+      "requests": [
+        {
+          "v": "16",
+          "name": "dropTables",
+          "method": "POST",
+          "endpoint": "http://localhost:3002/api/adEvent",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n    \"ad_id\": \"ad123\",\n    \"user_id\": \"user456\",\n    \"event_type\": \"click\",\n    \"event_data\": {\n        \"browser\": \"Chrome\",\n        \"ip\": \"127.0.0.1\"\n    }\n}"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "_ref_id": "req_mgdl8wsa_aeafbf54-a504-440d-9685-6a2e1881143d"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "_ref_id": "coll_mb9g7a7h_a1d8206f-5556-4332-ba56-15c7109b333e"
+    },
+    {
+      "v": 10,
+      "name": "analytics",
+      "folders": [
+        {
+          "v": 10,
+          "name": "event",
+          "folders": [],
+          "requests": [
+            {
+              "v": "16",
+              "name": "add event",
+              "method": "POST",
+              "endpoint": "http://localhost:3002/api/adEvent",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": "application/json",
+                "body": "{\n    \"ad_id\": \"ad123\",\n    \"user_id\": \"user456\",\n    \"event_type\": \"click\",\n    \"event_data\": {\n        \"browser\": \"Chrome\",\n        \"ip\": \"127.0.0.1\"\n    }\n}"
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_f2e4a98e-49a6-4a88-a82e-8a9c2ad68968"
+            },
+            {
+              "v": "16",
+              "name": "get by adId",
+              "method": "GET",
+              "endpoint": "http://localhost:3002/api/adEvent/ad123",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_784ad3d5-8494-4d6e-87d6-4ee4bfacb24a"
+            },
+            {
+              "v": "16",
+              "name": "get by adId with date range",
+              "method": "GET",
+              "endpoint": "http://localhost:3002/api/adEvent/ad123/time-range?startDate=2024-03-01T00:00:00Z&endDate=2024-03-29T23:59:59Z",
+              "params": [],
+              "headers": [],
+              "preRequestScript": "",
+              "testScript": "",
+              "auth": {
+                "authType": "inherit",
+                "authActive": true
+              },
+              "body": {
+                "contentType": null,
+                "body": null
+              },
+              "requestVariables": [],
+              "responses": {},
+              "_ref_id": "req_mgdl8wsa_65cdf3fa-9338-47cf-b742-fd0c252cef1a"
+            }
+          ],
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "headers": [],
+          "variables": [],
+          "_ref_id": "coll_mb9g7a7h_3c7c4edd-20fc-403d-a750-39ffac35acf7"
+        }
+      ],
+      "requests": [],
+      "auth": {
+        "authActive": true,
+        "authType": "inherit"
+      },
+      "headers": [],
+      "variables": [],
+      "_ref_id": "coll_mb9g7a7h_fb6787db-7b25-41d6-b193-544dd13bae4a"
+    }
+  ],
+  "requests": [],
+  "auth": {
+    "authActive": true,
+    "authType": "none"
+  },
+  "headers": [],
+  "variables": [],
+  "_ref_id": "coll_mb9g7a7h_dac9cb90-8a8d-4327-9011-03c09bd27696"
+}

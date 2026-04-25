@@ -1,0 +1,18 @@
+meta {
+  name: signin
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{studio-backend-uri}}api/auth/signin
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "admin@adcrivo.co",
+    "password": "password123"
+  }
+}

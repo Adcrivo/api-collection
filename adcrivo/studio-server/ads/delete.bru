@@ -1,0 +1,15 @@
+meta {
+  name: delete
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{studio-backend-uri}}api/ads/ads/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 
+}

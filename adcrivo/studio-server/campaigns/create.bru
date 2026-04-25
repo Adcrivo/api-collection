@@ -1,0 +1,18 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{studio-backend-uri}}api/campaigns/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name":"first campaign",
+    "description": "campaign1 desc"
+  }
+}
