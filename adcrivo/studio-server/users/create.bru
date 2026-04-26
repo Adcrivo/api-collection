@@ -7,14 +7,15 @@ meta {
 post {
   url: {{studio-backend-uri}}api/users/create
   body: json
-  auth: none
+  auth: inherit
 }
 
 body:json {
   {
+    "name": "New User",
     "email": "user@example.com",
     "password": "password123",
-    "firstName": "John",
-    "lastName": "Doe"
+    "role": "user"
   }
 }
+

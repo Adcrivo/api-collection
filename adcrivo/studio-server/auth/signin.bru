@@ -12,7 +12,16 @@ post {
 
 body:json {
   {
-    "email": "admin@adcrivo.co",
-    "password": "password123"
+    "email": "admin@adcrivo.com",
+    "password": "password"
+  }
+}
+
+script:post-response {
+  if (res.status === 200 && res.body.accessToken) {
+    bru.setVar("studio-token", res.body.accessToken);
+    console.log("Token updated successfully!");
+  } else {
+    console.log("Failed to update token. Status:", res.status, "Body:", res.body);
   }
 }

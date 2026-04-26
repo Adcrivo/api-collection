@@ -1,4 +1,15 @@
 meta {
   name: Adcrivo
-  type: collection
+}
+
+auth {
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{studio-token}}
+}
+
+vars:pre-request {
+  studio-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZGNyaXZvLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NzE4NjMzOSwiZXhwIjoxNzc3MjcyNzM5fQ.aYea3uH52W67n0-92RFLS7NcCZnPtSGRNIdTPoXAHSE
 }
